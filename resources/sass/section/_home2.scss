@@ -155,7 +155,7 @@
         transform: translatey(-50%);
         font-size: 30px;
         &:hover {
-            color: $secondary_color;
+            color: $third_color;
         }
         &.next_arrow {
             right: 0;
@@ -214,7 +214,7 @@
     & h3 {
         text-transform: uppercase;
         font-weight: 600;
-        color: #000000;
+        color: $primary_color;
         margin-bottom: 0;
         @media #{$desktop-device} {
             font-size: 22px;
@@ -229,7 +229,7 @@
         }
         & a {
             &:hover {
-                color: $secondary_color;
+                color: $third_color;
             }
         }
     }

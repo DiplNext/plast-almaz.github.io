@@ -57,6 +57,16 @@
 
   & .welcome_text {
     display: block;
+
+    & .sticky_none {
+      & img {
+        max-width: 50px;
+      }
+      & span {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
   }
 
   & .dropdown_language {
@@ -103,7 +113,7 @@
         cursor: pointer;
 
         &:hover {
-          color: $secondary_color;
+          color: $third_color;
         }
       }
     }
@@ -118,7 +128,7 @@
       border-bottom: 1px solid $grey_color;
 
       &:hover {
-        color: $secondary_color;
+        color: $third_color;
       }
     }
 
@@ -272,7 +282,7 @@
 
       &::before {
         position: absolute;
-        content: '';
+        content: "";
         width: 2px;
         height: 20px;
         background: $third_color;
@@ -366,7 +376,7 @@
 }
 
 .main_menu {
-  padding: 0 30px;
+  padding: 0 0 0 30px;
 
   & nav {
     & > ul {
@@ -399,8 +409,8 @@
           }
 
           & > a {
-            color: #ffffff;
-            background-color: $third_color;
+            color: $primary_color;
+            border-color: $primary_color;
 
             &::before {
               opacity: 1;
@@ -418,12 +428,11 @@
           text-transform: uppercase;
           color: #454545;
           padding: 10px 25px;
-          border-radius: 10px;
+          border: 2px solid transparent;
 
           &.active {
-            color: #ffffff;
-            background-color: $third_color;
-
+            color: $primary_color;
+            border-color: $primary_color;
             &::before {
               opacity: 1;
               visibility: visible;
@@ -472,7 +481,7 @@
               color: #000000;
 
               &:hover {
-                color: $secondary_color;
+                color: $third_color;
               }
             }
           }
@@ -962,8 +971,19 @@
   & a {
     max-width: 150px;
     display: inline-block;
-    background: #C7EEFF;
     padding: 10px 10px 30px;
+    text-align: center;
+    & span {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      color: $primary_color;
+      text-align: center;
+
+      @media #{$large-mobile} {
+        display: none;
+      }
+    }
     @media #{$tablet-device} {
       width: 110px;
       padding: 10px 10px 30px;
